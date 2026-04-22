@@ -1,0 +1,314 @@
+/* =========================================
+    ESTILOS BASE (GLOBAL)
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333333;
+    background-color: #ffffff;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+main {
+    flex: 1;
+}
+
+/* =========================================
+   CABECERA (GLOBAL - TODAS LAS PÁGINAS)
+========================================= */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    padding: 20px 40px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    max-width: 200px; 
+}
+
+
+.img-logo {
+    display: block;
+    max-height: 50px; 
+    width: 100%;      
+    height: auto;    
+    object-fit: contain; 
+}
+
+.lista {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.lista a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.lista a:hover {
+    color: #004a99;
+}
+
+.lista a.btn-contacto {
+    background-color: #ff6600;
+    color: #ffffff;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.lista a.btn-contacto:hover {
+    background-color: #e65c00;
+}
+
+/* =========================================
+   PORTADAS (INDEX Y INTERNAS)
+========================================= */
+.portada-principal {
+    background: linear-gradient(135deg, rgba(10, 17, 34, 0.9) 0%, rgba(26, 42, 74, 0.9) 100%);
+    padding: 100px 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+.contenido-portada {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contenido-portada h1 {
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.contenido-portada p {
+    font-size: 1.1rem;
+    color: #e2e8f0;
+    margin-bottom: 40px;
+}
+
+.botones-portada {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.boton-principal,
+.boton-secundario {
+    padding: 14px 32px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.boton-principal {
+    background-color: #ff6600;
+    color: #ffffff;
+    border: 2px solid #ff6600;
+}
+
+.boton-principal:hover {
+    background-color: #e65c00;
+    border-color: #e65c00;
+}
+
+.boton-secundario {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.boton-secundario:hover {
+    background-color: #ffffff;
+    color: #004a99;
+}
+
+.portada-interna {
+    background: linear-gradient(135deg, rgba(10, 17, 34, 0.9) 0%, rgba(0, 74, 153, 0.9) 100%);
+    padding: 60px 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* =========================================
+   SERVICIOS Y VALORES (INDEX Y EMPRESA)
+========================================= */
+.seccion-servicios,
+.seccion-valores {
+    padding: 100px 0;
+    background-color: #f8f9fa;
+}
+
+.cabecera-seccion {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.etiqueta-seccion {
+    display: block;
+    color: #ff6600;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+}
+
+.titulo-seccion {
+    color: #004a99;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.cuadro-servicios,
+.cuadro-valores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.tarjeta-servicio,
+.tarjeta-valor {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-servicio:hover,
+.tarjeta-valor:hover {
+    transform: translateY(-8px);
+}
+
+.icono-tarjeta img,
+.icono-valor img {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   PÁGINA SOBRE LA EMPRESA (INTERNA)
+========================================= */
+.informacion-empresa {
+    padding: 80px 0;
+}
+
+.contenedor-cuadro-informacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.espacio-imagen {
+    background-color: #f8f9fa;
+    height: 350px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #dddddd;
+}
+
+/* =========================================
+   FOOTER (GLOBAL - TODAS LAS PÁGINAS)
+========================================= */
+footer {
+    background-color: #004a99;
+    color: #ffffff;
+    padding-top: 60px;
+    margin-top: auto;
+}
+
+.footer-contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.footer-columna h4 {
+    color: #ff6600;
+    margin-bottom: 20px;
+}
+
+.footer-columna ul {
+    list-style: none;
+}
+
+.footer-columna li {
+    margin-bottom: 10px;
+}
+
+.footer-columna a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.barra-copyright {
+    background-color: #003366;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   BOTÓN WHATSAPP (GLOBAL - FLOTANTE)
+========================================= */
+.boton-whatsapp-flotante {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.boton-whatsapp-flotante img {
+    width: 100%;
+    height: 100%;
+    
+}
