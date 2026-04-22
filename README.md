@@ -2,7 +2,7 @@
 
 Este es el proyecto web que estamos desarrollando para el módulo. Ya he dejado montada la estructura de las páginas principales y aplicado los estilos necesarios para que todo tenga un acabado profesional.
 
-## Cambios realizados
+## Cambios realizados 22/04/2026
 
 ### index.html (Inicio)
 * **Maquetación:** He montado el menú de navegación y la portada principal con el estilo corporativo.
