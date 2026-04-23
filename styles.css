@@ -738,3 +738,161 @@ footer {
     padding: 16px 20px;
     max-height: 150px;
 }
+
+
+/* =========================================
+   PÁGINA DE SERVICIOS (ZIG-ZAG)
+========================================= */
+
+/* Activo en el menú */
+.lista a.activo {
+    color: #FF7600;
+    font-weight: 600;
+}
+
+/* Servicios en zig-zag */
+.servicio-zigzag {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.servicio-zigzag.alterno {
+    background-color: #f8f9fa;
+}
+
+.servicio-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.servicio-texto {
+    padding: 20px;
+}
+
+
+.servicio-titulo {
+    font-size: 2.2rem;
+    color: linear-gradient(135deg, rgba(10, 17, 34, 0.9) 0%, rgba(26, 42, 74, 0.9) 100%);;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.servicio-descripcion {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.servicio-lista {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.servicio-lista li {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.5;
+}
+
+/* Imágenes placeholder */
+.servicio-imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-placeholder {
+    width: 100%;
+    height: 350px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 64px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.imagen-placeholder:hover {
+    transform: scale(1.02);
+}
+
+.imagen-placeholder p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.climatizacion-img {
+    border: 5px;
+    border-radius: 10px;
+}
+
+.electricidad-img {
+    border: 5px;
+    border-radius: 10px;
+}
+
+.fontaneria-img {
+    border: 5px;
+    border-radius: 10px;
+}
+
+.mantenimiento-img {
+    border: 5px;
+    border-radius: 10px;
+}
+
+.especiales-img {
+    border: 5px;
+    border-radius: 10px;
+}
+
+/* BOTÓN ENORME DE PRESUPUESTO */
+.boton-presupuesto-enorme {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.presupuesto-contenido h2 {
+    font-size: 2.8rem;
+    color: black;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.presupuesto-contenido p {
+    font-size: 1.2rem;
+    color: black;
+    margin-bottom: 40px;
+}
+
+.boton-presupuesto-gigante {
+    display: inline-block;
+    background: linear-gradient(90deg, #FF7600, #FFA400);
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 800;
+    padding: 20px 50px;
+    border-radius: 60px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.boton-presupuesto-gigante:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(90deg, #e65c00, #e69500);
+}
