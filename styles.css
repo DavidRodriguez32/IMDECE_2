@@ -326,7 +326,7 @@ footer {
 
 /* HERO DE CONTACTO */
 .hero-contacto {
-    background: linear-gradient(135deg, #0B80D3 0%, #004a99 100%);
+    background: linear-gradient(135deg, rgba(10, 17, 34, 0.9) 0%, rgba(26, 42, 74, 0.9) 100%);
     padding: 60px 20px;
     text-align: center;
     color: #ffffff;
@@ -411,7 +411,7 @@ footer {
 }
 
 .formulario-header {
-    background-color: #0B80D3;
+    background: linear-gradient(135deg, rgba(10, 17, 34, 0.9) 0%, rgba(26, 42, 74, 0.9) 100%);
     padding: 18px 25px;
     display: flex;
     align-items: center;
@@ -471,7 +471,7 @@ footer {
 
 .campo-formulario input:focus,
 .campo-formulario textarea:focus {
-    border-color: #0B80D3;
+    border-color: linear-gradient(135deg, rgba(10, 17, 34, 0.9) 0%, rgba(26, 42, 74, 0.9) 100%);;
     outline: none;
     box-shadow: 0 0 0 3px rgba(11, 128, 211, 0.1);
 }
@@ -496,13 +496,13 @@ footer {
 }
 
 .chip-servicio:hover {
-    border-color: #0B80D3;
-    color: #0B80D3;
+    background: linear-gradient(135deg, rgba(10, 17, 34, 0.9) 0%, rgba(26, 42, 74, 0.9) 100%);
+    color: linear-gradient(135deg, rgba(10, 17, 34, 0.9) 0%, rgba(26, 42, 74, 0.9) 100%);;
 }
 
 .chip-servicio.seleccionado {
-    background-color: #0B80D3;
-    border-color: #0B80D3;
+    background-color: linear-gradient(135deg, rgba(10, 17, 34, 0.9) 0%, rgba(26, 42, 74, 0.9) 100%);;
+    border-color: linear-gradient(135deg, rgba(10, 17, 34, 0.9) 0%, rgba(26, 42, 74, 0.9) 100%);;
     color: #ffffff;
 }
 
@@ -518,7 +518,7 @@ footer {
     width: 17px;
     height: 17px;
     cursor: pointer;
-    accent-color: #0B80D3;
+    accent-color: linear-gradient(135deg, rgba(10, 17, 34, 0.9) 0%, rgba(26, 42, 74, 0.9) 100%);;
 }
 
 .campo-checkbox label {
@@ -527,14 +527,14 @@ footer {
 }
 
 .campo-checkbox a {
-    color: #0B80D3;
+    color: linear-gradient(135deg, rgba(10, 17, 34, 0.9) 0%, rgba(26, 42, 74, 0.9) 100%);;
     text-decoration: none;
 }
 
 /* BOTÓN ENVIAR */
 .boton-primario {
     width: 100%;
-    background: linear-gradient(90deg, #FF7600, #FFA400);
+    background: #FF7600;
     border: none;
     padding: 14px;
     color: #ffffff;
@@ -585,7 +585,7 @@ footer {
 }
 
 .bloque-header {
-    background-color: #0B80D3;
+    background: linear-gradient(135deg, rgba(10, 17, 34, 0.9) 0%, rgba(26, 42, 74, 0.9) 100%);
     padding: 14px 20px;
     display: flex;
     align-items: center;
@@ -649,7 +649,7 @@ footer {
 }
 
 .mapa-direccion {
-    background-color: #0B80D3;
+    background: linear-gradient(135deg, rgba(10, 17, 34, 0.9) 0%, rgba(26, 42, 74, 0.9) 100%);
     color: rgba(255, 255, 255, 0.85);
     padding: 12px 18px;
     font-size: 11px;
@@ -680,7 +680,7 @@ footer {
 }
 
 .faq-titulo {
-    color: #0B80D3;
+    color: linear-gradient(135deg, rgba(10, 17, 34, 0.9) 0%, rgba(26, 42, 74, 0.9) 100%);;
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 20px;
@@ -688,7 +688,7 @@ footer {
 }
 
 .texto-terciario {
-    color: #FFA400;
+    color: #FF7600;
 }
 
 .faq-lista {
@@ -716,7 +716,7 @@ footer {
 }
 
 .faq-pregunta:hover {
-    background-color: #0B80D3;
+    background-color: linear-gradient(135deg, rgba(10, 17, 34, 0.9) 0%, rgba(26, 42, 74, 0.9) 100%);;
     color: #ffffff;
 }
 
