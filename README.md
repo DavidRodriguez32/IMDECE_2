@@ -26,4 +26,4 @@ Este es el proyecto web que estamos desarrollando para el módulo. Ya he dejado 
 * He añadido estilos específicos para la página de contacto, incluyendo las tarjetas rápidas, el formulario, los chips de servicios, la barra lateral, el mapa animado y el acordeón de FAQ.
 
 ---
-*Nota: La base del diseño ya está lista, solo falta terminar de repasar los últimos detalles de estilo para que todo quede perfecto.*
+*Nota: La base del diseño ya está lista, solo falta terminar de repasar los últimos detalles de estilo para que todo quede perfecto. Y ya solo faltaría las páginas de Servicios y Contacto*
