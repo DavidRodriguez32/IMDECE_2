@@ -286,6 +286,13 @@ footer {
     color: #ffffff;
     text-decoration: none;
 }
+.footer-columna ul li a:hover {
+    color: #ff6600; 
+    transition: color 0.3s ease; 
+}
+.punto-naranja{
+    color: #e65c00;
+}
 
 .barra-copyright {
     background-color: #003366;
