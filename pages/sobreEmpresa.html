@@ -5,21 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../images/favicon.ico?v=2" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png?v=2">
-    <link rel="icon" type="../image/png" sizes="32x32" href="../images/favicon-32x32.png?v=2">
-    <link rel="icon" type="../image/png" sizes="16x16" href="../images/favicon-16x16.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png?v=2">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png?v=2">
     <title>Sobre la Empresa | IMDECE</title>
+
     <link rel="stylesheet" href="../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    
 </head>
 
 <body>
     <header>
         <div class="logo">
             <a href="../index.html">
-                <img src="../images/logo.png" alt="IMDECE Logo" class="img-logo">
+                <img src="../images/logo.png" alt="Logo IMDECE" class="img-logo">
             </a>
         </div>
+
+        
+
         <nav>
             <ul class="lista">
                 <li><a href="../index.html">Inicio</a></li>
@@ -29,35 +35,38 @@
             </ul>
         </nav>
     </header>
+
     <main>
         <div class="portada-interna">
             <div class="contenedor">
                 <h1>Sobre Imdece Andalucia SL</h1>
-                <p>Desde Coín, más de 10 años de expereiencia técnica a tu servicio</p>
+                <p>Desde Coín, 9 años de experiencia técnica a tu servicio</p>
             </div>
         </div>
 
-        <div class="informacion-empresa">
-            <div class="contenedor-cuadro-informacion">
-                <div class="texto-informacion">
-                    <h2 class="titulo-seccion">Sedes en Coín, servicio en toda la provincia de Málaga</h2>
-                    <p>Ubicados en <strong>Lugar Partido La Campiñuela, 325 (Coín)</strong>, somos especialistas en
-                        climatización, electricidad y fontanería.</p>
-                    <p>Nuestro equipo está avalado para realizar trabajos de pintura, acristalamiento y construcción
-                        especializada con el mayor rigor profesional.</p>
-
-                </div>
-                <div class="imagen-informacion">
-                    <div class="espacio-imagen">
-                        <span>[Foto Instalaciones]</span>
+        <div class="informacion-empresa animacion-aparecer">
+            <div class="contenedor">
+                <div class="contenedor-cuadro-informacion">
+                    <div class="texto-informacion">
+                        <h2 class="titulo-seccion">Sedes en Coín, servicio en toda la provincia de Málaga</h2>
+                        <p>Ubicados en <strong>Lugar Partido La Campiñuela, 325 (Coín)</strong>, somos especialistas en
+                            climatización, electricidad y fontanería.</p>
+                        <p>Nuestro equipo está avalado para realizar trabajos de pintura, acristalamiento y construcción
+                            especializada con el mayor rigor profesional.</p>
+                    </div>
+                    <div class="imagen-informacion">
+                        <div class="espacio-imagen">
+                            <img src="../images/instalar-aire-acondicionado.webp" alt="Foto de instalación">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="seccion-valores">
             <div class="contenedor">
                 <div class="cuadro-valores">
-                    <div class="tarjeta-valor">
+                    <div class="tarjeta-valor animacion-aparecer">
                         <div class="icono-valor">
                             <img src="../images/entrega-rapida.png" alt="Icono Rapidez">
                         </div>
@@ -65,7 +74,8 @@
                         <p>Asistencia técnica ágil y eficaz para minimizar cualquier inconveniente en tus instalaciones.
                         </p>
                     </div>
-                    <div class="tarjeta-valor">
+
+                    <div class="tarjeta-valor animacion-aparecer">
                         <div class="icono-valor">
                             <img src="../images/garantia.png" alt="Icono Garantía">
                         </div>
@@ -73,7 +83,8 @@
                         <p>Utilizamos materiales de primeras marcas y garantizamos por escrito todos nuestros trabajos.
                         </p>
                     </div>
-                    <div class="tarjeta-valor">
+
+                    <div class="tarjeta-valor animacion-aparecer">
                         <div class="icono-valor">
                             <img src="../images/profesionalismo.png" alt="Icono Profesionalidad">
                         </div>
@@ -113,9 +124,10 @@
                 </ul>
             </div>
         </div>
+
         <div class="barra-copyright">
             <div class="footer-contenedor2">
-                <p>&copy; 2026 Imdece Andalucia SL. Todos los derechos reservados.</p>
+                <p>&copy; <span id="anio-actual"></span> Imdece Andalucia SL. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
@@ -123,6 +135,8 @@
     <a href="https://wa.me/34662602040" class="boton-whatsapp-flotante" target="_blank">
         <img src="../images/WhatsApp.png" alt="Contactar por WhatsApp">
     </a>
+
+    <script src="../js/javascript.js" ></script>
 </body>
 
 </html>

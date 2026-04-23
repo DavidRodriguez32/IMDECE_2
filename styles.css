@@ -1,13 +1,11 @@
 /* =========================================
-    ESTILOS BASE (GLOBAL)
+   ESTILOS BASE (GLOBAL)
 ========================================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -42,6 +40,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 100;
 }
 
 .logo {
@@ -49,7 +48,6 @@ header {
     align-items: center;
     max-width: 200px; 
 }
-
 
 .img-logo {
     display: block;
@@ -184,12 +182,19 @@ header {
     margin-bottom: 15px;
 }
 
+/* Títulos (Grande y a la izquierda por defecto) */
 .titulo-seccion {
     color: #004a99;
-    font-size: 3rem;
+    font-size: 3.2rem;
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.1;
+    text-align: left;
+}
+
+/* Obligamos a centrar los títulos en la cabecera de la página principal */
+.cabecera-seccion .titulo-seccion {
+    text-align: center;
 }
 
 .cuadro-servicios,
@@ -206,12 +211,13 @@ header {
     padding: 40px;
     text-align: center;
     border-radius: 8px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tarjeta-servicio:hover,
 .tarjeta-valor:hover {
     transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .icono-tarjeta img,
@@ -234,14 +240,33 @@ header {
     align-items: center;
 }
 
+/* Texto despegado de la izquierda */
+.texto-informacion {
+    text-align: left;
+    padding-left: 40px;
+    padding-right: 20px;
+}
+
+.texto-informacion p {
+    font-size: 1.15rem;
+    margin-bottom: 15px;
+}
+
+/* FOTO REAL AJUSTADA (OBJECT-FIT) */
 .espacio-imagen {
-    background-color: #f8f9fa;
-    height: 350px;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px dashed #dddddd;
+    background-color: #f8f9fa; 
+    height: 400px; 
+    border-radius: 12px; 
+    border: none; 
+    overflow: hidden; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+}
+
+.espacio-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center; 
 }
 
 /* =========================================
@@ -312,10 +337,415 @@ footer {
     height: 60px;
     border-radius: 50%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
 }
 
 .boton-whatsapp-flotante img {
     width: 100%;
     height: 100%;
-    
+}
+
+/* =========================================
+   PÁGINA DE CONTACTO 
+========================================= */
+
+.hero-contacto {
+    background: linear-gradient(135deg, rgba(10, 17, 34, 0.9) 0%, rgba(26, 42, 74, 0.9) 100%);
+    padding: 60px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.hero-titulo {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero-descripcion {
+    font-size: 1rem;
+    max-width: 550px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+.tarjetas-rapidas {
+    background-color: #FF7600;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.tarjeta-rapida {
+    padding: 28px 24px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background 0.2s;
+}
+
+.tarjeta-rapida:last-child {
+    border-right: none;
+}
+
+.tarjeta-rapida:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.tarjeta-urgencia {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-icono {
+    font-size: 32px;
+}
+
+.tarjeta-info {
+    color: #ffffff;
+}
+
+.tarjeta-titulo {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.tarjeta-texto {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.seccion-contacto {
+    padding: 80px 20px;
+    background-color: #f8f9fa;
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.formulario-principal {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.formulario-header {
+    background: linear-gradient(135deg, rgba(10, 17, 34, 0.9) 0%, rgba(26, 42, 74, 0.9) 100%);
+    padding: 18px 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-header-icono {
+    font-size: 20px;
+}
+
+.form-header-titulo {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.formulario-cuerpo {
+    padding: 30px;
+}
+
+.fila-dos-columnas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 15px;
+}
+
+.campo-formulario {
+    margin-bottom: 18px;
+}
+
+.campo-formulario label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #666;
+    margin-bottom: 6px;
+}
+
+.requerido {
+    color: #FF7600;
+}
+
+.campo-formulario input,
+.campo-formulario textarea {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.campo-formulario input:focus,
+.campo-formulario textarea:focus {
+    border-color: #004a99;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(11, 128, 211, 0.1);
+}
+
+.lista-servicios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.chip-servicio {
+    background-color: #ffffff;
+    border: 1.5px solid #e0e0e0;
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.chip-servicio:hover, .chip-servicio.seleccionado {
+    background: #004a99;
+    color: #ffffff;
+    border-color: #004a99;
+}
+
+.campo-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.campo-checkbox input {
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    accent-color: #004a99;
+}
+
+.campo-checkbox label {
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.campo-checkbox a {
+    color: #004a99;
+    text-decoration: none;
+}
+
+.boton-primario {
+    width: 100%;
+    background: #FF7600;
+    border: none;
+    padding: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.boton-primario:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 118, 0, 0.3);
+}
+
+.info-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bloque-info, .bloque-mapa {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.bloque-header {
+    background: linear-gradient(135deg, rgba(10, 17, 34, 0.9) 0%, rgba(26, 42, 74, 0.9) 100%);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.bloque-icono {
+    font-size: 16px;
+}
+
+.bloque-titulo {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.bloque-contenido {
+    padding: 15px 20px;
+}
+
+.bloque-contenido p {
+    margin-bottom: 12px;
+    font-size: 13px;
+}
+
+.mapa-visual {
+    background: linear-gradient(145deg, #c8dff0, #a5c8e4);
+    padding: 25px;
+    text-align: center;
+}
+
+.mapa-pin {
+    font-size: 32px;
+    animation: rebote 2s infinite;
+}
+
+@keyframes rebote {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.mapa-nombre {
+    font-weight: 700;
+    margin-top: 8px;
+    color: #1a2a3a;
+}
+
+.mapa-direccion {
+    background: linear-gradient(135deg, rgba(10, 17, 34, 0.9) 0%, rgba(26, 42, 74, 0.9) 100%);
+    color: rgba(255, 255, 255, 0.85);
+    padding: 12px 18px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.faq-seccion {
+    padding: 80px 20px;
+    background-color: #ffffff;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.faq-etiqueta {
+    display: block;
+    color: #FF7600;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+}
+
+.faq-titulo {
+    color: #004a99;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.texto-terciario {
+    color: #FF7600;
+}
+
+.faq-lista {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.faq-item {
+    border: 1.5px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.faq-pregunta {
+    background-color: #fafafa;
+    padding: 16px 20px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.faq-pregunta:hover {
+    background: #004a99;
+    color: #ffffff;
+}
+
+.faq-mas {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.faq-respuesta {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s ease;
+    font-size: 13px;
+    color: #666;
+}
+
+.faq-respuesta.abierta {
+    padding: 16px 20px;
+    max-height: 150px;
+}
+
+/* =========================================
+   📱 RESPONSIVE (ADAPTACIÓN PARA MÓVILES)
+========================================= */
+@media (max-width: 768px) {
+    /* Ajuste de cabecera y títulos */
+    header { padding: 15px 20px; }
+    .titulo-seccion, .hero-titulo { font-size: 2.2rem; text-align: center; }
+    .contenido-portada h1 { font-size: 2.5rem; }
+    .portada-principal { padding: 60px 0; }
+    .boton-menu { display: block; font-size: 1.8rem; color: #004a99; cursor: pointer; }
+    .lista { display: none; } /* Ocultar menú en móvil hasta que haya JS */
+
+    /* Página Sobre la Empresa */
+    .contenedor-cuadro-informacion { grid-template-columns: 1fr; gap: 30px; }
+    .texto-informacion { padding-left: 0; padding-right: 0; text-align: center; }
+
+    /* Página Contacto */
+    .seccion-contacto { grid-template-columns: 1fr; }
+    .tarjetas-rapidas { grid-template-columns: 1fr 1fr; }
+    .tarjeta-rapida { border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+    .fila-dos-columnas { grid-template-columns: 1fr; }
+    .faq-lista { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+    .tarjetas-rapidas { grid-template-columns: 1fr; }
+    .botones-portada { flex-direction: column; }
 }
