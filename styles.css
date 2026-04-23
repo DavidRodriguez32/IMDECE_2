@@ -721,31 +721,594 @@ footer {
     max-height: 150px;
 }
 
+
 /* =========================================
-   📱 RESPONSIVE (ADAPTACIÓN PARA MÓVILES)
+   PÁGINA DE SERVICIOS (ZIG-ZAG)
 ========================================= */
-@media (max-width: 768px) {
-    /* Ajuste de cabecera y títulos */
-    header { padding: 15px 20px; }
-    .titulo-seccion, .hero-titulo { font-size: 2.2rem; text-align: center; }
-    .contenido-portada h1 { font-size: 2.5rem; }
-    .portada-principal { padding: 60px 0; }
-    .boton-menu { display: block; font-size: 1.8rem; color: #004a99; cursor: pointer; }
-    .lista { display: none; } /* Ocultar menú en móvil hasta que haya JS */
 
-    /* Página Sobre la Empresa */
-    .contenedor-cuadro-informacion { grid-template-columns: 1fr; gap: 30px; }
-    .texto-informacion { padding-left: 0; padding-right: 0; text-align: center; }
-
-    /* Página Contacto */
-    .seccion-contacto { grid-template-columns: 1fr; }
-    .tarjetas-rapidas { grid-template-columns: 1fr 1fr; }
-    .tarjeta-rapida { border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
-    .fila-dos-columnas { grid-template-columns: 1fr; }
-    .faq-lista { grid-template-columns: 1fr; }
+/* Activo en el menú */
+.lista a.activo {
+    color: #FF7600;
+    font-weight: 600;
 }
 
+/* Servicios en zig-zag */
+.servicio-zigzag {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.servicio-zigzag.alterno {
+    background-color: #f8f9fa;
+}
+
+.servicio-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.servicio-texto {
+    padding: 20px;
+}
+
+
+.servicio-titulo {
+    font-size: 2.2rem;
+    color: linear-gradient(135deg, rgba(10, 17, 34, 0.9) 0%, rgba(26, 42, 74, 0.9) 100%);;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.servicio-descripcion {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.servicio-lista {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.servicio-lista li {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.5;
+}
+
+/* Imágenes placeholder */
+.servicio-imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-placeholder {
+    width: 100%;
+    height: 350px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 64px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.imagen-placeholder:hover {
+    transform: scale(1.02);
+}
+
+.imagen-placeholder p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.climatizacion-img {
+    border: 5px;
+    border-radius: 10px;
+}
+
+.electricidad-img {
+    border: 5px;
+    border-radius: 10px;
+}
+
+.fontaneria-img {
+    border: 5px;
+    border-radius: 10px;
+}
+
+.mantenimiento-img {
+    border: 5px;
+    border-radius: 10px;
+}
+
+.especiales-img {
+    border: 5px;
+    border-radius: 10px;
+}
+
+/* BOTÓN ENORME DE PRESUPUESTO */
+.boton-presupuesto-enorme {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.presupuesto-contenido h2 {
+    font-size: 2.8rem;
+    color: black;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.presupuesto-contenido p {
+    font-size: 1.2rem;
+    color: black;
+    margin-bottom: 40px;
+}
+
+.boton-presupuesto-gigante {
+    display: inline-block;
+    background: linear-gradient(90deg, #FF7600, #FFA400);
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 800;
+    padding: 20px 50px;
+    border-radius: 60px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.boton-presupuesto-gigante:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(90deg, #e65c00, #e69500);
+}
+/* =========================================
+   📱 RESPONSIVE (ADAPTACIÓN PARA TODAS LAS PÁGINAS)
+   ========================================= */
+
+/* Pantallas medianas (tablets) */
+@media (max-width: 992px) {
+    /* ========== SERVICIOS (zig-zag) ========== */
+    .servicio-contenido {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .servicio-zigzag.alterno .servicio-contenido {
+        grid-template-columns: 1fr;
+    }
+    
+    .servicio-texto {
+        order: 2;
+    }
+    
+    .servicio-imagen {
+        order: 1;
+    }
+    
+    .imagen-placeholder {
+        height: 280px;
+    }
+    
+    /* ========== CONTACTO ========== */
+    .seccion-contacto {
+        grid-template-columns: 1fr;
+        padding: 50px 20px;
+    }
+    
+    .cuadro-contacto-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tarjetas-rapidas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .tarjeta-rapida {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .faq-lista {
+        grid-template-columns: 1fr;
+    }
+    
+    /* ========== BOTÓN PRESUPUESTO ========== */
+    .presupuesto-contenido h2 {
+        font-size: 2rem;
+    }
+    
+    .boton-presupuesto-gigante {
+        font-size: 1.2rem;
+        padding: 15px 35px;
+    }
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    /* ========== CABECERA GENERAL ========== */
+    header {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+    
+    .logo {
+        justify-content: center;
+    }
+    
+    .lista {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    /* ========== TÍTULOS Y TEXTOS ========== */
+    .titulo-seccion,
+    .hero-titulo {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .contenido-portada h1 {
+        font-size: 2rem;
+    }
+    
+    .contenido-portada p {
+        font-size: 0.9rem;
+    }
+    
+    .portada-principal,
+    .portada-interna {
+        padding: 50px 0;
+    }
+    
+    /* ========== SERVICIOS (zig-zag) ========== */
+    .servicio-zigzag {
+        padding: 50px 0;
+    }
+    
+    .servicio-titulo {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    
+    .servicio-descripcion {
+        text-align: center;
+    }
+    
+    .servicio-lista li {
+        font-size: 0.85rem;
+    }
+    
+    .servicio-icono {
+        text-align: center;
+    }
+    
+    .imagen-placeholder {
+        height: 220px;
+        font-size: 48px;
+    }
+    
+    .imagen-placeholder p {
+        font-size: 0.9rem;
+    }
+    
+    /* ========== CONTACTO ========== */
+    .hero-titulo {
+        font-size: 2rem;
+    }
+    
+    .hero-descripcion {
+        font-size: 0.9rem;
+    }
+    
+    .tarjetas-rapidas {
+        grid-template-columns: 1fr;
+    }
+    
+    .tarjeta-rapida {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .fila-dos-columnas {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .formulario-cuerpo {
+        padding: 20px;
+    }
+    
+    .form-header-titulo {
+        font-size: 16px;
+    }
+    
+    .faq-titulo {
+        font-size: 1.8rem;
+    }
+    
+    .faq-pregunta {
+        font-size: 13px;
+    }
+    
+    .bloque-contenido p {
+        font-size: 12px;
+    }
+    
+    .mapa-visual {
+        padding: 20px;
+    }
+    
+    .mapa-pin {
+        font-size: 28px;
+    }
+    
+    .mapa-nombre {
+        font-size: 12px;
+    }
+    
+    .mapa-direccion {
+        font-size: 10px;
+    }
+    
+    /* ========== BOTÓN PRESUPUESTO ENORME ========== */
+    .boton-presupuesto-enorme {
+        padding: 50px 20px;
+    }
+    
+    .presupuesto-contenido h2 {
+        font-size: 1.5rem;
+    }
+    
+    .presupuesto-contenido p {
+        font-size: 0.9rem;
+    }
+    
+    .boton-presupuesto-gigante {
+        font-size: 0.9rem;
+        padding: 12px 25px;
+    }
+    
+    /* ========== SOBRE LA EMPRESA ========== */
+    .contenedor-cuadro-informacion {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .texto-informacion {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+    
+    .espacio-imagen {
+        height: 250px;
+    }
+    
+    /* ========== BOTONES ========== */
+    .botones-portada {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .boton-principal,
+    .boton-secundario {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
+    
+    /* ========== FOOTER ========== */
+    .footer-contenedor {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .footer-columna h4 {
+        margin-bottom: 15px;
+    }
+    
+    .barra-copyright p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Pantallas muy pequeñas (móviles pequeños) */
 @media (max-width: 480px) {
-    .tarjetas-rapidas { grid-template-columns: 1fr; }
-    .botones-portada { flex-direction: column; }
+    /* ========== CABECERA ========== */
+    .lista {
+        gap: 10px;
+    }
+    
+    .lista a {
+        font-size: 12px;
+    }
+    
+    .lista a.btn-contacto {
+        padding: 6px 16px;
+        font-size: 12px;
+    }
+    
+    /* ========== TÍTULOS ========== */
+    .hero-titulo {
+        font-size: 1.8rem;
+    }
+    
+    .servicio-titulo {
+        font-size: 1.5rem;
+    }
+    
+    .faq-titulo {
+        font-size: 1.5rem;
+    }
+    
+    /* ========== SERVICIOS ========== */
+    .imagen-placeholder {
+        height: 180px;
+        font-size: 40px;
+    }
+    
+    .servicio-lista li {
+        font-size: 0.8rem;
+    }
+    
+    /* ========== CONTACTO ========== */
+    .tarjetas-rapidas {
+        grid-template-columns: 1fr;
+    }
+    
+    .tarjeta-rapida {
+        padding: 15px;
+    }
+    
+    .tarjeta-icono {
+        font-size: 24px;
+    }
+    
+    .tarjeta-titulo {
+        font-size: 13px;
+    }
+    
+    .tarjeta-texto {
+        font-size: 10px;
+    }
+    
+    .formulario-header {
+        padding: 12px 18px;
+    }
+    
+    .form-header-titulo {
+        font-size: 14px;
+    }
+    
+    .campo-formulario label {
+        font-size: 10px;
+    }
+    
+    .campo-formulario input,
+    .campo-formulario textarea {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+    
+    .chip-servicio {
+        font-size: 10px;
+        padding: 4px 12px;
+    }
+    
+    .boton-primario {
+        font-size: 12px;
+        padding: 10px;
+    }
+    
+    .bloque-header {
+        padding: 10px 15px;
+    }
+    
+    .bloque-titulo {
+        font-size: 12px;
+    }
+    
+    .bloque-contenido p {
+        font-size: 11px;
+    }
+    
+    /* ========== BOTÓN PRESUPUESTO ========== */
+    .presupuesto-contenido h2 {
+        font-size: 1.2rem;
+    }
+    
+    .presupuesto-contenido p {
+        font-size: 0.8rem;
+    }
+    
+    .boton-presupuesto-gigante {
+        font-size: 0.8rem;
+        padding: 10px 20px;
+    }
+    
+    /* ========== BOTONES PORTADA ========== */
+    .botones-portada {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    /* ========== FOOTER ========== */
+    .footer-logo {
+        font-size: 1.5rem;
+    }
+    
+    .footer-columna p,
+    .footer-columna li {
+        font-size: 12px;
+    }
+}
+
+/* Pantallas grandes (escritorio) - ajustes finos */
+@media (min-width: 1200px) {
+    .contenedor {
+        max-width: 1140px;
+    }
+    
+    .servicio-contenido {
+        gap: 80px;
+    }
+    
+    .servicio-titulo {
+        font-size: 2.5rem;
+    }
+}
+/* =========================================
+   CSS PARA EL JS
+========================================= */
+.estilo2 {
+    background-color: #004a99;
+    color: #ffffff;
+}
+
+.estilo2 h1,
+.estilo2 p,
+.estilo2 a {
+    color: #ffffff;
+}
+
+.animacion-aparecer {
+    opacity: 1; /*Dejarlo por ahora asi hasta hacer el js*/
+    transform: translateY(20px);
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+@keyframes moverDerechaRebote {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px) scale(1.05);
+    }
+    100% {
+        transform: translateX(0) scale(1);
+    }
 }
