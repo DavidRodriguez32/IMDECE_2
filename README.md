@@ -17,4 +17,4 @@ Este es el proyecto web que estamos desarrollando para el módulo. Ya he dejado 
 * He trabajado en la alineación y legibilidad de los textos principales para que la web se vea limpia y organizada.
 
 ---
-*Nota: La base del diseño ya está lista, solo falta terminar de repasar los últimos detalles de estilo para que todo quede perfecto.*
+*Nota: La base del diseño ya está lista, solo falta terminar de repasar los últimos detalles de estilo para que todo quede perfecto. Y ya solo faltaría las páginas de Servicios y Contacto*
