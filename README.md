@@ -1,8 +1,8 @@
 # Proyecto IMDECE - Práctica 1DAM
 
-Este es el proyecto web que estamos desarrollando para el módulo. Ya he dejado montada la estructura de las páginas principales y aplicado los estilos necesarios para que todo tenga un acabado profesional.
+Este es el proyecto web que estamos desarrollando para la prácticas duales. Ya he dejado montada la estructura de las páginas principales, aplicado los estilos necesarios para que todo tenga un acabado profesional y añadido la interactividad requerida manipulando el DOM.
 
-## Cambios realizados 22/04/2026
+## Cambios realizados 24/04/2026
 
 ### index.html (Inicio)
 * **Maquetación:** He montado el menú de navegación y la portada principal con el estilo corporativo.
@@ -16,12 +16,10 @@ Este es el proyecto web que estamos desarrollando para el módulo. Ya he dejado 
 * **Tarjetas de contacto rápido:** He implementado cuatro tarjetas horizontales con iconos que muestran la información esencial (teléfono, dirección, email y urgencias 24h) con fondo naranja y efecto hover.
 * **Formulario de contacto:** He maquetado un formulario completo con campos de nombre, apellidos, email, teléfono, asunto y mensaje. Todos los campos obligatorios están marcados con un asterisco naranja.
 * **Chips de servicios:** He añadido un selector visual tipo "chip" para que el usuario pueda indicar qué servicio necesita (Climatización, Electricidad, Instalaciones, Mantenimiento, Urgencia 24h).
-* **Validación y envío:** He implementado JavaScript para validar que todos los campos obligatorios estén rellenos, que el email tenga un formato válido y que se acepte la política de privacidad. Al enviar, se muestra un mensaje de éxito y se limpia el formulario.
 * **Barra lateral informativa:** He maquetado un bloque lateral con los datos de contacto completos, el horario de atención y un mapa visual simulado con animación en el pin.
 * **FAQ Acordeón:** He añadido una sección de preguntas frecuentes con un sistema de acordeón que muestra/oculta las respuestas al hacer clic.
 
 ### servicios.html
-
 * **Diseño en zig-zag:** He implementado un diseño alternante para cada servicio, donde la imagen y el texto se intercambian de posición para crear un efecto visual dinámico y atractivo.
 * **Servicio de Climatización:** He maquetado el primer bloque con texto a la izquierda e imagen a la derecha, incluyendo una lista desordenada con las características del servicio (instalación de aire acondicionado, mantenimiento, reparación de averías, limpieza de conductos, asesoramiento energético y aerotermia).
 * **Servicio de Electricidad:** He maquetado el segundo bloque con imagen a la izquierda y texto a la derecha, incluyendo una lista desordenada con las especialidades (instalaciones eléctricas completas, cuadros eléctricos, reparación de averías, iluminación LED, certificados CIE y sistemas de protección).
@@ -36,7 +34,14 @@ Este es el proyecto web que estamos desarrollando para el módulo. Ya he dejado 
 * He trabajado en la alineación y legibilidad de los textos principales para que la web se vea limpia y organizada.
 * He añadido estilos específicos para la página de contacto, incluyendo las tarjetas rápidas, el formulario, los chips de servicios, la barra lateral, el mapa animado y el acordeón de FAQ.
 * He añadido estilos específicos para la página de servicios, incluyendo el diseño zig-zag, las imágenes placeholder con gradientes personalizados, las listas desordenadas con viñetas y el botón enorme de presupuesto.
-* He implementado media queries completas para garantizar que todas las páginas (index, sobreEmpresa, contacto, servicios) se vean correctamente en dispositivos móviles (768px), tablets (992px) y pantallas muy pequeñas (480px).
+* He implementado media queries completas para garantizar que todas las páginas (index, sobreEmpresa, contacto, servicios) se vean correctamente y se adapten a diferentes tamaños de pantalla mediante CSS.
+
+### Funcionalidad y Manipulación del DOM (JavaScript)
+* **Año Dinámico:** Uso del objeto `Date()` para mantener actualizado el año del copyright en el pie de página de forma automática.
+* **Interactividad del DOM:** Integración de los métodos vistos en clase como `textContent` para modificar contenido dinámico, `classList` para añadir/quitar estilos en tiempo real, y modificación de atributos (como `.src`) para alterar elementos visuales a petición del usuario.
+* **Carrusel de Imágenes:** Uso de *Arrays* para almacenar y recorrer rutas de imágenes, apoyándose en funciones con `setTimeout` (recursividad) para crear un pase de diapositivas automático, además de ofrecer control manual mediante el evento de click.
+* **Control de Animaciones:** Manejo de animaciones CSS desde JavaScript forzando el recalculo de la vista del navegador (*reflow*) leyendo la propiedad `offsetWidth` para reiniciar las animaciones a demanda.
+* **Efectos de Carga en Cascada:** Uso de `querySelectorAll` y bucles `forEach` para iterar elementos de la interfaz. Aplicación de `setTimeout` con temporizadores dependientes del índice del elemento para lograr que las tarjetas aparezcan progresivamente de forma fluida.
 
 ---
-*Nota: La base del diseño ya está lista, solo falta terminar de repasar los últimos detalles de estilo para que todo quede perfecto. Faltaria el JS de las páginas Contacto y Servicio*
+*Nota: La base del diseño y la interacción mediante JavaScript de la página de inicio y la de la empresa ya están listas.  Faltaría el JS de las páginas Contacto y Servicio.*
