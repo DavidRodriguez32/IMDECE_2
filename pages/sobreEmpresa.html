@@ -4,16 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce IMDECE – Empresa familiar con más de 9 años de experiencia en climatización y electricidad en Coín, Málaga. Nuestro equipo, valores y compromiso contigo.">
     <link rel="icon" href="../images/favicon.ico?v=2" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png?v=2">
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png?v=2">
     <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png?v=2">
-    <title>Sobre la Empresa | IMDECE</title>
+    <title>Sobre la Empresa | IMDECE – Climatización y Electricidad Málaga</title>
 
     <link rel="stylesheet" href="../styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -23,56 +22,138 @@
                 <img src="../images/logo.png" alt="Logo IMDECE" class="img-logo">
             </a>
         </div>
-
-
+        <div class="btn-menu" id="menu-movil">&#9775</div>
 
         <nav>
             <ul class="lista">
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="sobreEmpresa.html">Sobre la Empresa</a></li>
+                <li><a href="sobreEmpresa.html" class="activo">Sobre la Empresa</a></li>
                 <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="contacto.html" class="btn-contacto">Pedir Presupuesto</a></li>
+                <li><a href="contacto.html" class="btn-contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <!-- PORTADA INTERNA -->
         <div class="portada-interna">
             <div class="contenedor">
-                <h1>Sobre Imdece Andalucia SL</h1>
-                <p>Desde Coín, 9 años de experiencia técnica a tu servicio</p>
+                <div class="contenido-portada">
+                    <span class="etiqueta-hero">Empresa familiar y profesional</span>
+                    <h1>Sobre Imdece Andalucia SL</h1>
+                    <p>Más de 9 años de experiencia técnica al servicio de hogares y empresas en toda la provincia de Málaga, desde nuestras instalaciones en Coín.</p>
+                </div>
             </div>
         </div>
 
+        <!-- QUIÉNES SOMOS -->
         <div class="informacion-empresa animacion-aparecer">
             <div class="contenedor">
                 <div class="contenedor-cuadro-informacion">
                     <div class="texto-informacion" id="caja-estilos">
-                        <h2 id="textoCambiarContenido" class="titulo-seccion">Sedes en Coín, servicio en toda la provincia de Málaga</h2>
-                        <p>Ubicados en <strong>Lugar Partido La Campiñuela, 325 (Coín)</strong>, somos especialistas en
-                            climatización, electricidad y fontanería.</p>
-                        <p>Nuestro equipo está avalado para realizar trabajos de pintura, acristalamiento y construcción
-                            especializada con el mayor rigor profesional.</p>
+                        <span class="etiqueta-seccion">Quiénes Somos</span>
+                        <h2 id="textoCambiarContenido" class="titulo-seccion">Expertos en Climatización y Electricidad en Málaga</h2>
+                        <p>Somos una empresa familiar con sede en el <strong>Parque Empresarial Ciudad de Coín</strong> (Calle Leandro Lomeña, Nave 22), especialistas en la instalación y mantenimiento de sistemas de climatización y en instalaciones eléctricas para todo tipo de clientes.</p>
+                        <p>Con más de <strong>9 años de trayectoria</strong>, hemos completado cientos de proyectos en hogares, locales comerciales, naves industriales y comunidades de propietarios en toda la provincia de Málaga, desde la capital hasta la Costa del Sol.</p>
+                        <p>Nuestro equipo de técnicos certificados trabaja con las marcas más reconocidas del sector: <strong>Daikin, Mitsubishi Electric, Climaver Neto y Airzone</strong>, garantizando siempre la máxima calidad, eficiencia energética y durabilidad en cada instalación.</p>
+                        <a href="contacto.html" class="boton-principal" style="display:inline-block; margin-top:20px;">Solicitar Información</a>
                     </div>
                     <div id="btnCambiarEstilos" class="imagen-informacion">
                         <div class="espacio-imagen" id="btnCambiarAtributo">
-                            <img id="imagen-cambiar" src="../images/instalar-aire-acondicionado.webp" alt="Foto de instalación">
+                            <img id="imagen-cambiar" src="../images/instalar-aire-acondicionado.webp" alt="Foto de instalación IMDECE">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- CARRUSEL DE FOTOS DE LA EMPRESA -->
+        <div class="seccion-carrusel">
+            <div class="contenedor">
+                <div class="cabecera-seccion">
+                    <span class="etiqueta-seccion">Nuestras Instalaciones y Equipo</span>
+                    <h2 class="titulo-seccion-centro">Así Trabajamos</h2>
+                    <p class="subtitulo-seccion">Imágenes de nuestros proyectos, equipo profesional e instalaciones en Coín, Málaga.</p>
+                </div>
+
+                <div class="carrusel-wrapper" id="carrusel-empresa">
+                    <!-- Slides -->
+                    <div class="carrusel-slides" id="carrusel-slides">
+                        <div class="carrusel-slide activo-slide">
+                            <img src="../images/proyecto_climatizacion1.png" alt="Instalación de climatización Daikin – IMDECE">
+                            <div class="carrusel-caption">
+                                <span class="cap-tipo">Climatización</span>
+                                <p>Instalación de sistema Daikin en empresa del sector servicios en Málaga</p>
+                            </div>
+                        </div>
+                        <div class="carrusel-slide">
+                            <img src="../images/instalar-aire-acondicionado.webp" alt="Montaje de aire acondicionado – IMDECE">
+                            <div class="carrusel-caption">
+                                <span class="cap-tipo">Aire Acondicionado</span>
+                                <p>Montaje e instalación de unidad de aire acondicionado en vivienda</p>
+                            </div>
+                        </div>
+                        <div class="carrusel-slide">
+                            <img src="../images/proyecto_climatizacion2.png" alt="Conductos Climaver Neto – IMDECE">
+                            <div class="carrusel-caption">
+                                <span class="cap-tipo">Conductos Climaver</span>
+                                <p>Red de conductos de climatización en nave industrial con sistema Climaver Neto</p>
+                            </div>
+                        </div>
+                        <div class="carrusel-slide">
+                            <img src="../images/proyecto_electricidad.png" alt="Instalación eléctrica – IMDECE">
+                            <div class="carrusel-caption">
+                                <span class="cap-tipo">Electricidad</span>
+                                <p>Instalación y mantenimiento de cuadro eléctrico en local comercial</p>
+                            </div>
+                        </div>
+                        <div class="carrusel-slide">
+                            <img src="../images/proyecto_oficina.png" alt="Climatización de oficinas – IMDECE">
+                            <div class="carrusel-caption">
+                                <span class="cap-tipo">Oficinas</span>
+                                <p>Climatización integral de espacio de oficinas con Mitsubishi Electric</p>
+                            </div>
+                        </div>
+                        <div class="carrusel-slide">
+                            <img src="../images/Instalacion electrica.avif" alt="Electricidad en vivienda – IMDECE">
+                            <div class="carrusel-caption">
+                                <span class="cap-tipo">Electricidad Residencial</span>
+                                <p>Instalación eléctrica completa en vivienda unifamiliar</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Flechas de navegación -->
+                    <button class="carrusel-btn carrusel-prev" id="carrusel-prev" aria-label="Imagen anterior">&#8592;</button>
+                    <button class="carrusel-btn carrusel-next" id="carrusel-next" aria-label="Imagen siguiente">&#8594;</button>
+
+                    <!-- Indicadores / Bullets -->
+                    <div class="carrusel-indicadores" id="carrusel-indicadores">
+                        <button class="carrusel-dot activo-dot" data-indice="0" aria-label="Ir a imagen 1"></button>
+                        <button class="carrusel-dot" data-indice="1" aria-label="Ir a imagen 2"></button>
+                        <button class="carrusel-dot" data-indice="2" aria-label="Ir a imagen 3"></button>
+                        <button class="carrusel-dot" data-indice="3" aria-label="Ir a imagen 4"></button>
+                        <button class="carrusel-dot" data-indice="4" aria-label="Ir a imagen 5"></button>
+                        <button class="carrusel-dot" data-indice="5" aria-label="Ir a imagen 6"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NUESTROS VALORES -->
         <div class="seccion-valores">
             <div class="contenedor">
+                <div class="cabecera-seccion">
+                    <span class="etiqueta-seccion">Por qué elegirnos</span>
+                    <h2 class="titulo-seccion">Lo que Nos Define</h2>
+                </div>
                 <div class="cuadro-valores">
                     <div id="btnAnimar1" class="tarjeta-valor animacion-aparecer">
                         <div class="icono-valor">
                             <img id="cuadroAnimar" src="../images/entrega-rapida.png" alt="Icono Rapidez">
                         </div>
                         <h3>Respuesta Rápida</h3>
-                        <p>Asistencia técnica ágil y eficaz para minimizar cualquier inconveniente en tus instalaciones.
-                        </p>
+                        <p>Asistencia técnica ágil y eficaz para minimizar cualquier inconveniente. Urgencias atendidas en menos de 4 horas para clientes con mantenimiento.</p>
                     </div>
 
                     <div class="tarjeta-valor animacion-aparecer">
@@ -80,29 +161,52 @@
                             <img src="../images/garantia.png" alt="Icono Garantía">
                         </div>
                         <h3>Garantía Total</h3>
-                        <p>Utilizamos materiales de primeras marcas y garantizamos por escrito todos nuestros trabajos.
-                        </p>
+                        <p>Materiales de primeras marcas y garantía por escrito en todos los trabajos. 2 años en mano de obra y hasta 5 años en equipos instalados.</p>
                     </div>
 
                     <div class="tarjeta-valor animacion-aparecer">
                         <div class="icono-valor">
                             <img src="../images/profesionalismo.png" alt="Icono Profesionalidad">
                         </div>
-                        <h3>Profesionalidad</h3>
-                        <p>Técnicos certificados que cumplen estrictamente con todas las normativas de seguridad
-                            vigentes.</p>
+                        <h3>Técnicos Certificados</h3>
+                        <p>Todo nuestro equipo cuenta con certificaciones oficiales y formación continua. Cumplimiento estricto de normativas RITE y REBT.</p>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- CIFRAS DE LA EMPRESA -->
+        <div class="seccion-cifras">
+            <div class="contenedor">
+                <div class="cifras-grid">
+                    <div class="cifra-item">
+                        <span class="cifra-numero">+9</span>
+                        <span class="cifra-label">Años de Experiencia</span>
+                    </div>
+                    <div class="cifra-item">
+                        <span class="cifra-numero">+500</span>
+                        <span class="cifra-label">Instalaciones Realizadas</span>
+                    </div>
+                    <div class="cifra-item">
+                        <span class="cifra-numero">4</span>
+                        <span class="cifra-label">Marcas Líderes</span>
+                    </div>
+                    <div class="cifra-item">
+                        <span class="cifra-numero">24h</span>
+                        <span class="cifra-label">Servicio de Urgencias</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <footer>
         <div class="footer-contenedor">
             <div class="footer-columna">
                 <h3 class="footer-logo">IMDECE<span class="punto-naranja">.</span></h3>
-                <p>Ubicados en Coín, ofrecemos servicios de calidad en climatización y multiservicios en toda Málaga.
-                </p>
+                <p>Ubicados en el Parque Empresarial Ciudad de Coín, ofrecemos servicios de climatización y electricidad en toda Málaga.</p>
+                <p class="footer-direccion">📍 C/ Leandro Lomeña, Nave 22 · Coín (Málaga)</p>
             </div>
 
             <div class="footer-columna">
@@ -116,11 +220,22 @@
             </div>
 
             <div class="footer-columna">
-                <h4>Información Legal</h4>
+                <h4>Nuestros Servicios</h4>
                 <ul>
-                    <li><a href="#">Aviso Legal</a></li>
-                    <li><a href="#">Política de Privacidad</a></li>
-                    <li><a href="#">Política de Cookies</a></li>
+                    <li><a href="servicios.html">Climatización</a></li>
+                    <li><a href="servicios.html">Instalaciones Eléctricas</a></li>
+                    <li><a href="servicios.html">Control Airzone</a></li>
+                    <li><a href="servicios.html">Mantenimiento</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-columna">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="tel:+34662602040">📞 662 60 20 40</a></li>
+                    <li><a href="mailto:info@imdece.com">✉️ info@imdece.com</a></li>
+                    <li>⏰ Lun–Vie 8:00–18:00</li>
+                    <li>🆘 Urgencias 24h</li>
                 </ul>
             </div>
         </div>

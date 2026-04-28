@@ -4,14 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="IMDECE – Expertos en climatización y electricidad en Málaga. Instalación y mantenimiento de sistemas Daikin, Mitsubishi Electric y Airzone para hogares y empresas.">
     <link rel="icon" href="images/favicon.ico?v=2" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png?v=2">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png?v=2">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png?v=2">
-    <title>IMDECE | Climatización, Electricidad y Fontanería en Málaga</title>
+    <title>IMDECE | Climatización y Electricidad en Málaga</title>
 
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
 
 </head>
 
@@ -22,39 +25,87 @@
                 <img src="images/logo.png" alt="Logo IMDECE" class="img-logo">
             </a>
         </div>
+        <div class="btn-menu" id="menu-movil">&#9775</div>
 
         <nav>
             <ul class="lista">
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html" class="activo">Inicio</a></li>
                 <li><a href="pages/sobreEmpresa.html">Sobre la Empresa</a></li>
                 <li><a href="pages/servicios.html">Servicios</a></li>
-                <li><a href="pages/contacto.html" class="btn-contacto">Pedir Presupuesto</a></li>
+                <li><a href="pages/contacto.html" class="btn-contacto">Contacto Directo</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <!-- ===================== HERO PRINCIPAL ===================== -->
         <div id="inicio" class="portada-principal">
             <div class="contenedor">
                 <div id="caja-estilos" class="contenido-portada">
-                    <h1>Soluciones Integrales en Climatización y Electricidad</h1>
+                    <span class="etiqueta-hero">Especialistas en Climatización &amp; Electricidad</span>
+                    <h1>Soluciones Integrales para tu <span class="hero-highlight">Confort</span> y tu Negocio</h1>
                     <p id="textoCambiarContenido">Instalaciones de vanguardia, mantenimiento preventivo y respuesta
-                        rápida para hogares y empresas
-                        en toda la provincia de Málaga. </p>
+                        rápida para hogares y empresas en toda la provincia de Málaga.</p>
                     <div class="botones-portada">
                         <a id="btnCambiarContenido" href="pages/contacto.html" class="boton-principal">Presupuesto Sin
                             Compromiso</a>
                         <a id="btnCambiarEstilos" href="pages/servicios.html" class="boton-secundario">Ver Servicios</a>
                     </div>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <span class="stat-numero">+9</span>
+                            <span class="stat-label">Años de experiencia</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="stat-numero">+500</span>
+                            <span class="stat-label">Proyectos realizados</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="stat-numero">⚡</span>
+                            <span class="stat-label">Servicio rápido</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
+        <!-- ===================== TARJETAS DE SERVICIO RÁPIDO ===================== -->
+        <div class="seccion-servicios-rapidos">
+            <div class="contenedor">
+                <div class="cuadro-servicios-rapidos">
+                    <div class="tarjeta-rapida-servicio">
+                        <div class="trs-icono">❄️</div>
+                        <h3>Climatización</h3>
+                        <p>Instalación y mantenimiento de sistemas de aire acondicionado, calefacción y ventilación para
+                            hogares y empresas.</p>
+                        <a href="pages/servicios.html" class="trs-link">Ver detalle →</a>
+                    </div>
+                    <div class="tarjeta-rapida-servicio">
+                        <div class="trs-icono">⚡</div>
+                        <h3>Instalaciones Eléctricas</h3>
+                        <p>Sistemas eléctricos seguros y homologados: viviendas, locales comerciales, naves industriales
+                            y mantenimiento preventivo.</p>
+                        <a href="pages/servicios.html" class="trs-link">Ver detalle →</a>
+                    </div>
+                    <div class="tarjeta-rapida-servicio">
+                        <div class="trs-icono">🎛️</div>
+                        <h3>Control Inteligente</h3>
+                        <p>Domótica y gestión centralizada de la climatización y calefacción con el sistema Airzone para
+                            máxima eficiencia energética.</p>
+                        <a href="pages/servicios.html" class="trs-link">Ver detalle →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===================== SECCIÓN "POR QUÉ ELEGIRNOS" ===================== -->
         <div class="seccion-servicios">
             <div class="contenedor">
                 <div class="cabecera-seccion">
                     <span class="etiqueta-seccion">Nuestra Especialidad</span>
                     <h2 class="titulo-seccion">Confianza y Eficiencia en cada Proyecto</h2>
+                    <p class="subtitulo-seccion">Más de 9 años instalando y manteniendo sistemas de climatización y
+                        electricidad en toda la provincia de Málaga con la máxima garantía.</p>
                 </div>
 
                 <div class="cuadro-servicios">
@@ -62,40 +113,151 @@
                         <div class="icono-tarjeta">
                             <img id="cuadroAnimar" src="images/cristal-de-hielo.png" alt="Icono Climatización">
                         </div>
-                        <h3>Climatización</h3>
-                        <p>Diseño, instalación y mantenimiento de sistemas de aire acondicionado y calefacción para tu
-                            confort térmico.</p>
+                        <h3>Climatización Premium</h3>
+                        <p>Trabajamos con las marcas líderes del sector: <strong>Daikin</strong> y <strong>Mitsubishi
+                                Electric</strong>, garantizando el mejor rendimiento y durabilidad en cada instalación.
+                        </p>
                     </div>
                     <div class="tarjeta-servicio animacion-aparecer">
                         <div class="icono-tarjeta">
                             <img src="images/rayo.png" alt="Icono Electricidad">
                         </div>
                         <h3>Instalaciones Eléctricas</h3>
-                        <p>Sistemas eléctricos seguros, reformas completas y mantenimiento preventivo con la máxima
-                            garantía.</p>
+                        <p>Sistemas eléctricos seguros, reformas completas y mantenimiento preventivo. Cumplimiento
+                            total de normativas vigentes con la máxima garantía por escrito.</p>
                     </div>
                     <div class="tarjeta-servicio animacion-aparecer">
                         <div class="icono-tarjeta">
-                            <img src="images/agua.png" alt="Icono Fontanería y Reformas">
+                            <img src="images/entrega-rapida.png" alt="Icono Respuesta Rápida">
                         </div>
-                        <h3>Fontanería y Multiservicios</h3>
-                        <p>Trabajos profesionales de fontanería, pintura, acristalamiento y construcción especializada.
-                        </p>
+                        <h3>Servicio Rápido</h3>
+                        <p>Atención ágil para tus incidencias. Técnicos especializados que llegan a tu domicilio
+                            o empresa en el menor tiempo posible.</p>
+                    </div>
+                    <div class="tarjeta-servicio animacion-aparecer">
+                        <div class="icono-tarjeta">
+                            <img src="images/garantia.png" alt="Icono Garantía">
+                        </div>
+                        <h3>Garantía Total</h3>
+                        <p>Garantizamos por escrito todos nuestros trabajos: 2 años en mano de obra y hasta 5 años en
+                            los equipos instalados. Tu tranquilidad, nuestra prioridad.</p>
+                    </div>
+                    <div class="tarjeta-servicio animacion-aparecer">
+                        <div class="icono-tarjeta">
+                            <img src="images/profesionalismo.png" alt="Icono Profesionalidad">
+                        </div>
+                        <h3>Técnicos Certificados</h3>
+                        <p>Todo nuestro equipo cuenta con las certificaciones oficiales requeridas y formación continua
+                            en los últimos sistemas y tecnologías del sector.</p>
+                    </div>
+                    <div class="tarjeta-servicio animacion-aparecer">
+                        <div class="icono-tarjeta">
+                            <img src="images/cristal-de-hielo.png" alt="Icono Eficiencia">
+                        </div>
+                        <h3>Eficiencia Energética</h3>
+                        <p>Asesoramiento especializado para reducir tu consumo energético. Instalamos sistemas de alta
+                            eficiencia que se amortizan rápidamente en tu factura.</p>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- ===================== SECCIÓN VÍDEO PROMOCIONAL ===================== -->
+        <div class="seccion-video">
+            <div class="contenedor">
+                <div class="cabecera-seccion">
+                    <span class="etiqueta-seccion">Conócenos</span>
+                    <h2 class="titulo-seccion-centro">Descubre IMDECE en Acción</h2>
+                    <p class="subtitulo-seccion">Mira cómo trabajamos y por qué somos la opción preferida en
+                        climatización y electricidad en Málaga.</p>
+                </div>
+                <div class="video-wrapper">
+                    <video controls>
+                        <source src="videos/video_promocional.mp4" type="video/mp4">
+                        Tu navegador no soporta la etiqueta de vídeo.
+                    </video>
+                </div>
+            </div>
         </div>
+
+        <!-- ===================== SECCIÓN MARCAS COLABORADORAS ===================== -->
+        <div class="seccion-marcas">
+            <div class="contenedor">
+                <div class="cabecera-seccion">
+                    <span class="etiqueta-seccion">Nuestros Fabricantes</span>
+                    <h2 class="titulo-seccion-centro">Trabajamos con las Mejores Marcas</h2>
+                    <p class="subtitulo-seccion">Distribuidores oficiales y colaboradores de los fabricantes líderes en
+                        climatización y control inteligente del hogar y la empresa.</p>
+                </div>
+                <div class="grid-marcas">
+                    <div class="tarjeta-marca">
+                        <div class="marca-logo-wrap">
+                            <img src="images/logo_daikin.png" alt="Daikin – Máquinas de climatización">
+                        </div>
+                        <div class="marca-info">
+                            <h4>Daikin</h4>
+                            <p>Máquinas de climatización · Líder mundial en tecnología inverter de alta eficiencia</p>
+                        </div>
+                    </div>
+                    <div class="tarjeta-marca">
+                        <div class="marca-logo-wrap">
+                            <img src="images/logo_mitsubishi.png" alt="Mitsubishi Electric – Climatización">
+                        </div>
+                        <div class="marca-info">
+                            <h4>Mitsubishi Electric</h4>
+                            <p>Máquinas de climatización · Sistemas de aire acondicionado de precisión para todo tipo de
+                                instalaciones</p>
+                        </div>
+                    </div>
+                    <div class="tarjeta-marca">
+                        <div class="marca-logo-wrap">
+                            <img src="images/logo_climaver.png" alt="Climaver Neto – Conductos de climatización">
+                        </div>
+                        <div class="marca-info">
+                            <h4>Climaver Neto</h4>
+                            <p>Conductos de climatización · Sistema de conductos prefabricado de lana de vidrio de alta
+                                eficiencia</p>
+                        </div>
+                    </div>
+                    <div class="tarjeta-marca">
+                        <div class="marca-logo-wrap">
+                            <img src="images/logo_airzone.png" alt="Airzone – Control inteligente de climatización">
+                        </div>
+                        <div class="marca-info">
+                            <h4>Airzone</h4>
+                            <p>Control inteligente · Sistema avanzado de gestión de climatización y calefacción por
+                                zonas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!-- ===================== FRANJA CTA ===================== -->
+        <div class="franja-cta">
+            <div class="contenedor">
+                <div class="cta-contenido">
+                    <div class="cta-texto">
+                        <h2>¿Necesitas una instalación o revisión?</h2>
+                        <p>Solicita tu presupuesto gratuito hoy. Te respondemos en menos de 24 horas laborables.</p>
+                    </div>
+                    <div class="cta-acciones">
+                        <a href="pages/contacto.html" class="boton-principal">Contáctanos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <footer>
         <div class="footer-contenedor">
             <div class="footer-columna">
                 <h3 class="footer-logo">IMDECE<span class="punto-naranja">.</span></h3>
-                <p>Ubicados en Coín, ofrecemos servicios de calidad en climatización y multiservicios en toda Málaga.
-                </p>
+                <p>Ubicados en el Parque Empresarial Ciudad de Coín, ofrecemos servicios de calidad en climatización y
+                    electricidad en toda la provincia de Málaga.</p>
+                <p class="footer-direccion">📍 C/ Leandro Lomeña, Nave 22 · Parque Empresarial Ciudad de Coín, Coín
+                    (Málaga)</p>
             </div>
 
             <div class="footer-columna">
@@ -109,11 +271,24 @@
             </div>
 
             <div class="footer-columna">
-                <h4>Información Legal</h4>
+                <h4>Nuestros Servicios</h4>
                 <ul>
-                    <li><a href="#">Aviso Legal</a></li>
-                    <li><a href="#">Política de Privacidad</a></li>
-                    <li><a href="#">Política de Cookies</a></li>
+                    <li><a href="pages/servicios.html">Climatización</a></li>
+                    <li><a href="pages/servicios.html">Instalaciones Eléctricas</a></li>
+                    <li><a href="pages/servicios.html">Control Airzone</a></li>
+                    <li><a href="pages/servicios.html">Mantenimiento</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-columna">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="tel:+34662602040"><img src="images\telefono.png" alt="icono teléfono"> 662 60 20 40</a>
+                    </li>
+                    <li><a href="mailto:info@imdece.com"><img src="images\correo.png" alt="icono correo">
+                            info@imdece.com</a></li>
+                    <li><img src="images\calendario.png" alt="icono horario"> Lun–Vie 8:00–18:00</li>
+                    <li><img src="images\sos.png" alt="icono urgencia"> Servicio rápido</li>
                 </ul>
             </div>
         </div>
@@ -125,9 +300,7 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/34662602040" class="boton-whatsapp-flotante" target="_blank">
-        <img src="images/WhatsApp.png" alt="Contactar por WhatsApp">
-    </a>
+
     <script src="js/javascript.js"></script>
 </body>
 
