@@ -3,34 +3,11 @@
    Funcionalidades:
      1. Año dinámico en el footer
      2. Menú hamburguesa móvil
-     3. Carrusel de fotos (sobreEmpresa) con dots y flechas
+     3. Carrusel de fotos (sobreEmpresa) con puntos y flechas
      4. Cambio de imagen automático (sobreEmpresa)
      5. Animación de aparición (scroll)
-     6. FAQ acordeón
-     7. Chips de servicio (contacto)
+
 ============================================= */
-
-/* -------- Referencias DOM -------- */
-const spanAnio     = document.getElementById("anio-actual");
-const btnMenu      = document.getElementById("menu-movil");
-const listaNav     = document.querySelector(".lista");
-
-/* Carrusel */
-const slides          = document.querySelectorAll(".carrusel-slide");
-const dots            = document.querySelectorAll(".carrusel-dot");
-const btnPrev         = document.getElementById("carrusel-prev");
-const btnNext         = document.getElementById("carrusel-next");
-
-/* Cambio de imagen (sobreEmpresa) */
-const btnCambiarAtributo = document.getElementById("btnCambiarAtributo");
-const imagenCambiar      = document.getElementById("imagen-cambiar");
-
-/* Animaciones aparecer */
-const tarjetasAnimables = document.querySelectorAll(".animacion-aparecer");
-
-/* Animación rebote */
-const btnAnimar1  = document.getElementById("btnAnimar1");
-const cuadroAnimar = document.getElementById("cuadroAnimar");
 
 let imagenmostrada = 0;
 let indiceCarrusel = 0;
@@ -40,75 +17,98 @@ let indiceCarrusel = 0;
 ============================================= */
 document.addEventListener("DOMContentLoaded", () => {
 
+    /* -------- Referencias DOM -------- */
+    const elementoAnio = document.getElementById("anio-actual");
+    const botonMenu = document.getElementById("menu-movil");
+    const listaNavegacion = document.querySelector(".lista");
+
+    /* Carrusel */
+    const diapositivas = document.querySelectorAll(".carrusel-diapositiva");
+    const puntos = document.querySelectorAll(".carrusel-punto");
+    const botonAnterior = document.getElementById("carrusel-anterior");
+    const botonSiguiente = document.getElementById("carrusel-siguiente");
+
+    /* Cambio de imagen (sobreEmpresa) */
+    const botonCambiarAtributo = document.getElementById("botonCambiarAtributo");
+    const imagenCambiar = document.getElementById("imagen-cambiar");
+
+    /* Animaciones aparecer */
+    const tarjetasAnimables = document.querySelectorAll(".animacion-aparecer");
+
+    /* Animación rebote */
+    const botonAnimar1 = document.getElementById("botonAnimar1");
+    const cuadroAnimar = document.getElementById("cuadroAnimar");
+
     /* ---------- 1. AÑO ACTUAL ---------- */
-    if (spanAnio) {
-        spanAnio.textContent = new Date().getFullYear();
+    if (elementoAnio) {
+        elementoAnio.textContent = new Date().getFullYear();
     }
 
     /* ---------- 2. MENÚ HAMBURGUESA ---------- */
-    if (btnMenu && listaNav) {
-        btnMenu.addEventListener("click", () => {
-            listaNav.classList.toggle("active");
+    if (botonMenu && listaNavegacion) {
+        botonMenu.addEventListener("click", () => {
+            listaNavegacion.classList.toggle("activa");
         });
     }
 
-    /* ---------- 3. CARRUSEL CON FLECHAS Y DOTS ---------- */
-    if (slides.length > 0 && btnPrev && btnNext) {
+    /* ---------- 3. CARRUSEL CON FLECHAS Y PUNTOS ---------- */
+    if (diapositivas.length > 0 && botonAnterior && botonSiguiente) {
 
-        function mostrarSlide(indice) {
+        function mostrarDiapositiva(indice) {
             /* Ocultar todos */
-            slides.forEach(s => s.classList.remove("activo-slide"));
-            dots.forEach(d  => d.classList.remove("activo-dot"));
+            diapositivas.forEach(diapositiva => diapositiva.classList.remove("diapositiva-activa"));
+            puntos.forEach(punto => punto.classList.remove("punto-activo"));
 
             /* Mostrar el activo */
-            slides[indice].classList.add("activo-slide");
-            if (dots[indice]) dots[indice].classList.add("activo-dot");
+            diapositivas[indice].classList.add("diapositiva-activa");
+            if (puntos[indice]) puntos[indice].classList.add("punto-activo");
 
             indiceCarrusel = indice;
         }
 
         /* Flecha anterior */
-        btnPrev.addEventListener("click", () => {
+        botonAnterior.addEventListener("click", () => {
             let nuevo = indiceCarrusel - 1;
-            if (nuevo < 0) nuevo = slides.length - 1;
-            mostrarSlide(nuevo);
+            if (nuevo < 0) nuevo = diapositivas.length - 1;
+            mostrarDiapositiva(nuevo);
         });
 
         /* Flecha siguiente */
-        btnNext.addEventListener("click", () => {
+        botonSiguiente.addEventListener("click", () => {
             let nuevo = indiceCarrusel + 1;
-            if (nuevo >= slides.length) nuevo = 0;
-            mostrarSlide(nuevo);
+            if (nuevo >= diapositivas.length) nuevo = 0;
+            mostrarDiapositiva(nuevo);
         });
 
-        /* Clicks en los dots */
-        dots.forEach(dot => {
-            dot.addEventListener("click", () => {
-                const idx = parseInt(dot.getAttribute("data-indice"), 10);
-                mostrarSlide(idx);
+        /* Clicks en los puntos */
+        puntos.forEach(punto => {
+            punto.addEventListener("click", () => {
+                const indice = parseInt(punto.getAttribute("data-indice"), 10);
+                mostrarDiapositiva(indice);
             });
         });
 
         /* Auto-avance cada 5 segundos */
         setInterval(() => {
             let nuevo = indiceCarrusel + 1;
-            if (nuevo >= slides.length) nuevo = 0;
-            mostrarSlide(nuevo);
+            if (nuevo >= diapositivas.length) nuevo = 0;
+            mostrarDiapositiva(nuevo);
         }, 5000);
     }
 
     /* ---------- 4. CAMBIO DE IMAGEN (sobreEmpresa) ---------- */
-    if (btnCambiarAtributo && imagenCambiar) {
+    if (botonCambiarAtributo && imagenCambiar) {
         const imagenes = [
-            "../images/instalar-aire-acondicionado.webp",
-            "../images/Instalacion electrica.avif",
-            "../images/proyecto_climatizacion1.png",
-            "../images/proyecto_climatizacion2.png",
-            "../images/proyecto_electricidad.png",
-            "../images/proyecto_oficina.png"
+            "../images/oficina Imdece.jpeg",
+            "../images/oficina imdece 2.jpeg",
+            "../images/oficina imdece 3.jpeg",
+            "../images/oficina imdece 4 .jpeg",
+            "../images/Imdece.jpeg",
+            "../images/imdece vehiculo.jpeg",
+            "../images/personal.jpeg"
         ];
 
-        const cambiarFoto = () => {
+        const funcionCambiarFoto = () => {
             imagenmostrada = (imagenmostrada + 1) % imagenes.length;
             imagenCambiar.style.opacity = "0";
             setTimeout(() => {
@@ -119,76 +119,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
         imagenCambiar.style.transition = "opacity 0.3s ease";
 
-        btnCambiarAtributo.addEventListener("click", (event) => {
-            event.preventDefault();
-            cambiarFoto();
+        botonCambiarAtributo.addEventListener("click", (evento) => {
+            evento.preventDefault();
+            funcionCambiarFoto();
         });
 
         /* Auto-cambio cada 4s */
-        setTimeout(function autoCambio() {
-            cambiarFoto();
-            setTimeout(autoCambio, 4000);
+        setTimeout(function funcionAutoCambio() {
+            funcionCambiarFoto();
+            setTimeout(funcionAutoCambio, 4000);
         }, 4000);
     }
 
     /* ---------- 5. ANIMACIÓN REBOTE (icono) ---------- */
-    if (btnAnimar1 && cuadroAnimar) {
-        btnAnimar1.addEventListener("click", (event) => {
-            event.preventDefault();
+    if (botonAnimar1 && cuadroAnimar) {
+        botonAnimar1.addEventListener("click", (evento) => {
+            evento.preventDefault();
             cuadroAnimar.style.animation = "none";
             void cuadroAnimar.offsetWidth;
             cuadroAnimar.style.animation = "moverDerechaRebote 1.2s ease-in-out forwards";
         });
     }
 
-    /* ---------- 6. ANIMACIONES DE APARICIÓN (Intersection Observer) ---------- */
+    /* ---------- 6. ANIMACIONES DE APARICIÓN ---------- */
     if (tarjetasAnimables.length > 0) {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, idx) => {
-                if (entry.isIntersecting) {
+        const observador = new IntersectionObserver((entradas) => {
+            entradas.forEach((entrada, indice) => {
+                if (entrada.isIntersecting) {
                     setTimeout(() => {
-                        entry.target.classList.add("visible");
-                    }, 100 * idx);
-                    observer.unobserve(entry.target);
+                        entrada.target.classList.add("visible");
+                    }, 100 * indice);
+                    observador.unobserve(entrada.target);
                 }
             });
         }, { threshold: 0.15 });
 
-        tarjetasAnimables.forEach(el => observer.observe(el));
+        tarjetasAnimables.forEach(elemento => observador.observe(elemento));
     }
 
-    /* ---------- 7. FAQ ACORDEÓN ---------- */
-    const preguntasFAQ = document.querySelectorAll(".faq-pregunta");
-
-    preguntasFAQ.forEach(preg => {
-        preg.addEventListener("click", () => {
-            const id = preg.getAttribute("data-id");
-            const respuesta = document.getElementById("respuesta" + id);
-            const iconoMas  = preg.querySelector(".faq-mas");
-
-            if (!respuesta) return;
-
-            const estaAbierta = respuesta.classList.contains("abierta");
-
-            /* Cerramos todas primero */
-            document.querySelectorAll(".faq-respuesta").forEach(r => r.classList.remove("abierta"));
-            document.querySelectorAll(".faq-mas").forEach(i => i.textContent = "+");
-
-            /* Si estaba cerrada, la abrimos */
-            if (!estaAbierta) {
-                respuesta.classList.add("abierta");
-                if (iconoMas) iconoMas.textContent = "−";
-            }
-        });
-    });
-
-    /* ---------- 8. CHIPS DE SERVICIO (contacto) ---------- */
-    const chips = document.querySelectorAll(".chip-servicio");
-
-    chips.forEach(chip => {
-        chip.addEventListener("click", () => {
-            chips.forEach(c => c.classList.remove("seleccionado"));
-            chip.classList.add("seleccionado");
-        });
-    });
 });

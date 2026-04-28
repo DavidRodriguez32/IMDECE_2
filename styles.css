@@ -128,7 +128,7 @@ header {
 ========================================= */
 .portada-principal {
     background: linear-gradient(135deg, rgba(10, 17, 34, 0.92) 0%, rgba(0, 55, 120, 0.92) 100%),
-                url('../images/proyecto_climatizacion1.png') center / cover no-repeat;
+                url('../images/personal.jpeg') center / cover no-repeat;
     padding: 130px 0 100px;
     text-align: center;
     color: #ffffff;
@@ -245,7 +245,7 @@ header {
 /* Portada interna (páginas interiores) */
 .portada-interna {
     background: linear-gradient(135deg, rgba(10, 17, 34, 0.92) 0%, rgba(0, 74, 153, 0.88) 100%),
-                url('../images/proyecto_climatizacion2.png') center / cover no-repeat;
+                url('../images/instalacion daikin 5.jpeg') center / cover no-repeat;
     padding: 80px 0;
     text-align: center;
     color: #ffffff;
@@ -447,7 +447,7 @@ header {
 }
 
 .marca-logo-wrap {
-    height: 80px;
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -455,7 +455,7 @@ header {
 }
 
 .marca-logo-wrap img {
-    max-height: 70px;
+    max-height: 110px;
     max-width: 100%;
     object-fit: contain;
     filter: grayscale(30%);
@@ -593,22 +593,22 @@ header {
     box-shadow: 0 20px 60px rgba(0,0,0,0.15);
 }
 
-.carrusel-slides {
+.carrusel-diapositivas {
     display: flex;
     transition: transform 0.5s ease;
 }
 
-.carrusel-slide {
+.carrusel-diapositiva {
     min-width: 100%;
     position: relative;
     display: none;
 }
 
-.carrusel-slide.activo-slide {
+.carrusel-diapositiva.diapositiva-activa {
     display: block;
 }
 
-.carrusel-slide img {
+.carrusel-diapositiva img {
     width: 100%;
     height: 500px;
     object-fit: cover;
@@ -671,8 +671,8 @@ header {
     border-color: #ff6600;
 }
 
-.carrusel-prev { left: 20px; }
-.carrusel-next { right: 20px; }
+.carrusel-anterior { left: 20px; }
+.carrusel-siguiente { right: 20px; }
 
 /* Indicadores (bullets) */
 .carrusel-indicadores {
@@ -685,7 +685,7 @@ header {
     z-index: 10;
 }
 
-.carrusel-dot {
+.carrusel-punto {
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -696,14 +696,14 @@ header {
     padding: 0;
 }
 
-.carrusel-dot.activo-dot {
+.carrusel-punto.punto-activo {
     background: #ff6600;
     border-color: #ff6600;
     width: 32px;
     border-radius: 10px;
 }
 
-.carrusel-dot:hover {
+.carrusel-punto:hover {
     background: rgba(255,255,255,0.8);
 }
 
@@ -1162,34 +1162,6 @@ header {
     background: #eee;
 }
 
-/* Botón WhatsApp grande */
-.boton-whatsapp-grande {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    background: #25D366;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 14px 24px;
-    border-radius: 12px;
-    font-weight: 700;
-    font-size: 0.95rem;
-    transition: all 0.3s ease;
-    margin-bottom: 24px;
-}
-
-.boton-whatsapp-grande img {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-}
-
-.boton-whatsapp-grande:hover {
-    background: #128C7E;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
-}
 
 /* Horario */
 .bloque-horario {
@@ -1422,6 +1394,20 @@ footer {
     margin-bottom: 12px;
     font-size: 0.88rem;
     color: rgba(255,255,255,0.65);
+    display: flex;
+    align-items: center;
+}
+
+.footer-columna li img {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+.footer-columna li a {
+    display: flex;
+    align-items: center;
 }
 
 .footer-columna a {
@@ -1444,28 +1430,7 @@ footer {
     color: rgba(255,255,255,0.5);
 }
 
-/* =========================================
-   BOTÓN WHATSAPP FLOTANTE
-========================================= */
-.boton-whatsapp-flotante {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-    z-index: 999;
-    transition: transform 0.3s ease;
-}
 
-.boton-whatsapp-flotante:hover { transform: scale(1.12); }
-
-.boton-whatsapp-flotante img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-}
 
 /* =========================================
    CSS PARA EL JS (animaciones)
@@ -1496,6 +1461,33 @@ footer {
     0%   { transform: translateX(0); }
     50%  { transform: translateX(20px) scale(1.06); }
     100% { transform: translateX(0) scale(1); }
+}
+
+/* =========================================
+   SECCIÓN VÍDEO PROMOCIONAL
+========================================= */
+.seccion-video {
+    padding: 80px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.video-wrapper {
+    max-width: 900px;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    background-color: #0a1122;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    outline: none;
 }
 
 /* =========================================
@@ -1595,7 +1587,7 @@ footer {
         width: 100%;
     }
 
-    .lista.active { display: flex; }
+    .lista.activa { display: flex; }
 
     .titulo-seccion,
     .titulo-seccion-centro,
