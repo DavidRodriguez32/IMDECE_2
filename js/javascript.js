@@ -71,49 +71,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const tarjetasAnimables = document.querySelectorAll(".animacion-aparecer");
 
     if (tarjetasAnimables.length > 0) {
-        tarjetasAnimables.forEach((item, index) => {
-            setTimeout(() => {
-                item.classList.add("visible");
-            }, 200 * index);
-        });
+        const observador = new IntersectionObserver((entradas) => {
+            entradas.forEach((entrada, indice) => {
+                if (entrada.isIntersecting) {
+                    setTimeout(() => {
+                        entrada.target.classList.add("visible");
+                    }, 100 * indice);
+                    observador.unobserve(entrada.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        tarjetasAnimables.forEach(elemento => observador.observe(elemento));
     }
 
-    //Carrusel de proyectos de la empresa
-    if (diapositivas.length > 0) {
-        function mostrarDiapositiva(numero) {
-            for (let i = 0; i < diapositivas.length; i++) {
-                diapositivas[i].classList.remove("diapositiva-activa");
-                puntos[i].classList.remove("punto-activo");
-            }
-            diapositivas[numero].classList.add("diapositiva-activa");
-            puntos[numero].classList.add("punto-activo");
-            indiceCarrusel = numero;
-        }
-
-        if (btnSiguiente) {
-            btnSiguiente.addEventListener("click", () => {
-                let nuevoIndice = indiceCarrusel + 1;
-                if (nuevoIndice >= diapositivas.length) {
-                    nuevoIndice = 0;
-                }
-                mostrarDiapositiva(nuevoIndice);
-            });
-        }
-
-        if (btnAnterior) {
-            btnAnterior.addEventListener("click", () => {
-                let nuevoIndice = indiceCarrusel - 1;
-                if (nuevoIndice < 0) {
-                    nuevoIndice = diapositivas.length - 1;
-                }
-                mostrarDiapositiva(nuevoIndice);
-            });
-        }
-
-        for (let i = 0; i < puntos.length; i++) {
-            puntos[i].addEventListener("click", () => {
-                mostrarDiapositiva(i);
-            });
-        }
-    }
 });
