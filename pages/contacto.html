@@ -34,137 +34,24 @@
     <main>
         <!-- CONTENIDO PRINCIPAL DE CONTACTO -->
         <div class="contenedor-contacto">
+            <!-- BARRA LATERAL INFORMACIÓN -->
+            <div class="info-lateral">
+                <!-- Datos de contacto -->
+                <div class="bloque-info">
+                    <div class="bloque-header">
+                        <h3 class="bloque-titulo">Datos de contacto</h3>
+                    </div>
+                    <div class="bloque-contenido">
+                        <p><strong>Teléfono:</strong> +34 662 60 20 40</p>
+                        <p><strong>Email:</strong> info@imdece.com</p>
+                        <p><strong>Presupuestos:</strong> presupuestos@imdece.com</p>
 
-            <!-- HERO (título principal) -->
-            <div class="hero-contacto">
-                <h1 class="hero-titulo">Contáctanos</h1>
-                <p class="hero-descripcion">Presupuesto gratuito y sin compromiso. Le respondemos en menos de 24 horas
-                    laborables.</p>
-            </div>
+                        <p><strong>Dirección:</strong>  C/ Leandro Lomeña, Nave 22 · Parque Empresarial Ciudad de Coín, Coín
+                    (Málaga)</p>
 
-            <!-- TARJETAS DE CONTACTO RÁPIDO -->
-            <div class="tarjetas-rapidas">
-                <div class="tarjeta-rapida">
-                    <div class="tarjeta-icono">📞</div>
-                    <div class="tarjeta-info">
-                        <div class="tarjeta-titulo">+34 662 60 20 40</div>
-                        <div class="tarjeta-texto">Lun–Vie 8:00–18:00</div>
+
                     </div>
                 </div>
-                <div class="tarjeta-rapida">
-                    <div class="tarjeta-icono">📍</div>
-                    <div class="tarjeta-info">
-                        <div class="tarjeta-titulo">Lugar Partido La Campiñuela, 325</div>
-                        <div class="tarjeta-texto">29100 – Málaga (Coín)</div>
-                    </div>
-                </div>
-                <div class="tarjeta-rapida">
-                    <div class="tarjeta-icono">✉️</div>
-                    <div class="tarjeta-info">
-                        <div class="tarjeta-titulo">info@imdece.com</div>
-                        <div class="tarjeta-texto">Respuesta en &lt;24h</div>
-                    </div>
-                </div>
-                <div class="tarjeta-rapida tarjeta-urgencia">
-                    <div class="tarjeta-icono">⚠️</div>
-                    <div class="tarjeta-info">
-                        <div class="tarjeta-titulo">Urgencias 24H</div>
-                        <div class="tarjeta-texto">Disponible siempre</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SECCIÓN PRINCIPAL: FORMULARIO + INFO LATERAL -->
-            <div class="seccion-contacto">
-
-                <!-- FORMULARIO -->
-                <div class="formulario-principal">
-                    <div class="formulario-header">
-                        <span class="form-header-icono">✉️</span>
-                        <h2 class="form-header-titulo">Solicitar presupuesto</h2>
-                    </div>
-
-                    <div class="formulario-cuerpo">
-                        <!-- Nombre y Apellidos -->
-                        <div class="fila-dos-columnas">
-                            <div class="campo-formulario">
-                                <label>Nombre <span class="requerido">*</span></label>
-                                <input type="text" id="nombre" placeholder="Su nombre">
-                            </div>
-                            <div class="campo-formulario">
-                                <label>Apellidos <span class="requerido">*</span></label>
-                                <input type="text" id="apellidos" placeholder="Sus apellidos">
-                            </div>
-                        </div>
-
-                        <!-- Email y Teléfono -->
-                        <div class="fila-dos-columnas">
-                            <div class="campo-formulario">
-                                <label>Email <span class="requerido">*</span></label>
-                                <input type="email" id="email" placeholder="correo@ejemplo.com">
-                            </div>
-                            <div class="campo-formulario">
-                                <label>Teléfono</label>
-                                <input type="tel" id="telefono" placeholder="+34 600 000 000">
-                            </div>
-                        </div>
-
-                        <!-- Servicio de interés (botones tipo chip) -->
-                        <div class="campo-formulario">
-                            <label>Servicio que necesita</label>
-                            <div class="lista-servicios">
-                                <span class="chip-servicio" data-servicio="Climatización">Climatización</span>
-                                <span class="chip-servicio" data-servicio="Electricidad">Electricidad</span>
-                                <span class="chip-servicio" data-servicio="Instalaciones">Instalaciones</span>
-                                <span class="chip-servicio" data-servicio="Mantenimiento">Mantenimiento</span>
-                                <span class="chip-servicio" data-servicio="Urgencia">Urgencia 24h</span>
-                            </div>
-                        </div>
-
-                        <!-- Asunto -->
-                        <div class="campo-formulario">
-                            <label>Asunto <span class="requerido">*</span></label>
-                            <input type="text" id="asunto" placeholder="¿En qué podemos ayudarle?">
-                        </div>
-
-                        <!-- Mensaje -->
-                        <div class="campo-formulario">
-                            <label>Mensaje <span class="requerido">*</span></label>
-                            <textarea id="mensaje" rows="4" placeholder="Describa su necesidad..."></textarea>
-                        </div>
-
-                        <!-- Aceptar privacidad -->
-                        <div class="campo-checkbox">
-                            <input type="checkbox" id="privacidad">
-                            <label for="privacidad">Acepto la <a href="#">Política de Privacidad</a></label>
-                        </div>
-
-                        <!-- Botón enviar -->
-                        <button class="boton-primario" id="btnEnviar">Enviar mensaje →</button>
-
-                        <!-- Mensaje de éxito -->
-                        <div class="mensaje-exito" id="mensajeExito" style="display: none;">
-                            ✅ ¡Mensaje enviado! Le contactaremos en menos de 24 horas.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- BARRA LATERAL INFORMACIÓN -->
-                <div class="info-lateral">
-
-                    <!-- Datos de contacto -->
-                    <div class="bloque-info">
-                        <div class="bloque-header">
-                            <span class="bloque-icono">📞</span>
-                            <h3 class="bloque-titulo">Datos de contacto</h3>
-                        </div>
-                        <div class="bloque-contenido">
-                            <p><strong>Teléfono:</strong> +34 662 60 20 40</p>
-                            <p><strong>Email:</strong> info@imdece.com</p>
-                            <p><strong>Presupuestos:</strong> presupuestos@imdece.com</p>
-                            <p><strong>Dirección:</strong> Lugar Partido La Campiñuela, 325, 29100 Málaga (Coín)</p>
-                        </div>
-                    </div>
 
                 <!-- Horario de atención -->
                 <div class="bloque-info">
@@ -215,10 +102,10 @@
             <div class="footer-columna">
                 <h4>Nuestros Servicios</h4>
                 <ul>
-                    <li><a href="pages/servicios.html">Climatización</a></li>
-                    <li><a href="pages/servicios.html">Instalaciones Eléctricas</a></li>
-                    <li><a href="pages/servicios.html">Control Airzone</a></li>
-                    <li><a href="pages/servicios.html">Mantenimiento</a></li>
+                    <li><a href="servicios.html">Climatización</a></li>
+                    <li><a href="servicios.html">Instalaciones Eléctricas</a></li>
+                    <li><a href="servicios.html">Control Airzone</a></li>
+                    <li><a href="servicios.html">Mantenimiento</a></li>
                 </ul>
             </div>
 
@@ -227,10 +114,9 @@
                 <ul>
                     <li><a href="tel:+34662602040"><img src="../images\telefono.png" alt="icono teléfono"> 662 60 20 40</a>
                     </li>
-                    <li><a href="mailto:info@imdece.com"><img src="images\correo.png" alt="icono correo">
+                    <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@imdece.com" target="_blank"><img src="../images/correo.png" alt="icono correo">
                             info@imdece.com</a></li>
-                    <li><img src="images\calendario.png" alt="icono horario"> Lun–Vie 8:00–18:00</li>
-                    <li><img src="images\sos.png" alt="icono urgencia"> Servicio rápido</li>
+                   
                 </ul>
             </div>
         </div>
