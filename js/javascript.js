@@ -67,6 +67,36 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // Lógica del carrusel ("Así Trabajamos")
+    if (diapositivas.length > 0 && btnAnterior && btnSiguiente) {
+        const actualizarCarrusel = () => {
+            diapositivas.forEach(d => d.classList.remove("diapositiva-activa"));
+            puntos.forEach(p => p.classList.remove("punto-activo"));
+            
+            diapositivas[indiceCarrusel].classList.add("diapositiva-activa");
+            if (puntos[indiceCarrusel]) {
+                puntos[indiceCarrusel].classList.add("punto-activo");
+            }
+        };
+
+        btnAnterior.addEventListener("click", () => {
+            indiceCarrusel = (indiceCarrusel === 0) ? diapositivas.length - 1 : indiceCarrusel - 1;
+            actualizarCarrusel();
+        });
+
+        btnSiguiente.addEventListener("click", () => {
+            indiceCarrusel = (indiceCarrusel === diapositivas.length - 1) ? 0 : indiceCarrusel + 1;
+            actualizarCarrusel();
+        });
+
+        puntos.forEach((punto, i) => {
+            punto.addEventListener("click", () => {
+                indiceCarrusel = i;
+                actualizarCarrusel();
+            });
+        });
+    }
+
     //Funcionalidad para recorrer elementos del DOM (Aparición en cascada)
     const tarjetasAnimables = document.querySelectorAll(".animacion-aparecer");
 
