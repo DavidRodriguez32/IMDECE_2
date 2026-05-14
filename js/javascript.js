@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (btnMenu) {
         btnMenu.addEventListener("click", () => {
             if (listaNav) {
-                listaNav.classList.toggle("active");
+                listaNav.classList.toggle("activa");
             }
         });
     }
